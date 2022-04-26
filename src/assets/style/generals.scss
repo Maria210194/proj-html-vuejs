@@ -5,10 +5,20 @@
     box-sizing: border-box;
 }
 
+// utilities: 
+
 .w-90 {
     width: 90vw;
 }
 
 .w-80 {
     width: 80vw;
+}
+
+.btn-orange {
+    background-color: #fed23f;
+    color: #666;
+    border: 0;
+    font-size: 8px;
+    padding: 7px 12px;
 }
