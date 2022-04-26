@@ -6,6 +6,13 @@
 }
 
 // utilities: 
+body {
+    font-family: sans-serif;
+}
+
+.w-100 {
+    width: 100vw;
+}
 
 .w-90 {
     width: 90vw;
@@ -17,8 +24,26 @@
 
 .btn-orange {
     background-color: #fed23f;
-    color: #666;
+    color: #6b6868;
     border: 0;
     font-size: 8px;
     padding: 7px 12px;
+
+    &:hover {
+        color: white;
+        background-color: #1e1e1e;
+    }
+}
+
+.btn-black {
+    border: 0;
+    font-size: 8px;
+    padding: 7px 12px;
+    color: white;
+    background-color: #1e1e1e;
+
+    &:hover {
+        background-color: #fed23f;
+        color: #6b6868;
+    }
 }
