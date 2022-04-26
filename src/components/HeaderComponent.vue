@@ -10,8 +10,12 @@
       </div>
       <div class="col-7 header-nav">
         <ul>
-          <li v-for="element in arrayNav" :key="element">
-            <a href="#">{{ element }}</a>
+          <li
+            v-for="element in arrayNav"
+            :key="element.name"
+            :class="{ active: element.active }"
+          >
+            <a href="#">{{ element.name }}</a>
           </li>
         </ul>
       </div>
@@ -23,11 +27,38 @@
 </template>
 
 <script>
+/*
+  {
+  name:"HOME", 
+  active: false
+  },
+*/
 export default {
   name: "HeaderComponent",
   data() {
     return {
-      arrayNav: ["HOME", "ABOUT", "SERVICES", "WORK", "ARTICLES"],
+      arrayNav: [
+        {
+          name: "HOME",
+          active: true,
+        },
+        {
+          name: "ABOUT",
+          active: false,
+        },
+        {
+          name: "SERVICES",
+          active: false,
+        },
+        {
+          name: "WORK",
+          active: false,
+        },
+        {
+          name: "ARTICLES",
+          active: false,
+        },
+      ],
     };
   },
 };
@@ -51,12 +82,16 @@ export default {
   list-style: none;
   flex: 0 0 auto;
   margin: 15px;
+  &.active {
+    border-bottom: 2px solid #fed23f;
+  }
 
   a {
     color: #666;
     text-decoration: none;
     font-size: 8px;
   }
+
   &:hover {
     color: #fed23f;
     border-bottom: 2px solid #fed23f;
