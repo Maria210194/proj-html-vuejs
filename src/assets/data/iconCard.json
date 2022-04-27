@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "fa-regular fa-building",
+        "title": "Buildings",
+        "url": "#"
+    },
+    {
+        "icon": "fa-solid fa-recycle",
+        "title": "Renovate",
+        "url": "#",
+    },
+    {
+        "icon": "fa-solid fa-house",
+        "title": "Construct",
+        "url": "#"
+    },
+    {
+        "icon": "fa-solid fa-truck",
+        "title": "Exclusive",
+        "url": "#"
+    }
+]

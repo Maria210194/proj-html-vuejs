@@ -11,8 +11,8 @@
       <div class="col-7 header-nav">
         <ul>
           <li
-            v-for="element in arrayNav"
-            :key="element.name"
+            v-for="(element, index) in links"
+            :key="index"
             :class="{ active: element.active }"
           >
             <a href="#">{{ element.name }}</a>
@@ -31,35 +31,13 @@
   {
   name:"HOME", 
   active: false
+  url: "#"
   },
 */
 export default {
   name: "HeaderComponent",
-  data() {
-    return {
-      arrayNav: [
-        {
-          name: "HOME",
-          active: true,
-        },
-        {
-          name: "ABOUT",
-          active: false,
-        },
-        {
-          name: "SERVICES",
-          active: false,
-        },
-        {
-          name: "WORK",
-          active: false,
-        },
-        {
-          name: "ARTICLES",
-          active: false,
-        },
-      ],
-    };
+  props: {
+    links: Array,
   },
 };
 </script>

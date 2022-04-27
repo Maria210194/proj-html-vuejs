@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderComponent />
+    <HeaderComponent :links="arrayNav" />
     <MainComponent />
     <FooterComponent />
   </div>
@@ -10,9 +10,13 @@
 import HeaderComponent from "./components/HeaderComponent.vue";
 import MainComponent from "./components/MainComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import arrayNav from "@/assets/data/arrayNav";
 
 export default {
   name: "App",
+  data() {
+    return { arrayNav };
+  },
   components: {
     HeaderComponent,
     MainComponent,
