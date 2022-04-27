@@ -12,7 +12,7 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
       <button class="btn-black">GET A FREE QUOTE</button>
     </div>
-    <div class="card-container w-90 d-flex">
+    <div class="info-container w-90 d-flex">
       <div class="info col-8">
         <h4>Specialist in Modern Costruction</h4>
         <p>
@@ -21,47 +21,28 @@
           nostrum.
         </p>
       </div>
-      <div id="cards">
-        <div class="card col-3">
-          <i class="fa-regular fa-building"></i>
-          <h5>Buildings</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            reprehenderit repudiandae voluptatibus vel aut molestias sequi.
-          </p>
-        </div>
-        <div class="card col-3">
-          <i class="fa-solid fa-recycle"></i>
-          <h5>Renovate</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            reprehenderit repudiandae voluptatibus vel aut molestias sequi.
-          </p>
-        </div>
-        <div class="card col-3">
-          <i class="fa-solid fa-house"></i>
-          <h5>Construct</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            reprehenderit repudiandae voluptatibus vel aut molestias sequi.
-          </p>
-        </div>
-        <div class="card col-3">
-          <i class="fa-solid fa-truck"></i>
-          <h5>Exclusive</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            reprehenderit repudiandae voluptatibus vel aut molestias sequi.
-          </p>
-        </div>
-      </div>
+    </div>
+    <div class="d-flex w-90 ml-0">
+      <CardComponent
+        v-for="(item, index) in iconCard"
+        :key="index"
+        :card="item"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import CardComponent from "@/components/CardComponent.vue";
+
 export default {
   name: "MainComponent",
+  props: {
+    iconCard: Array,
+  },
+  components: {
+    CardComponent,
+  },
 };
 </script>
 
@@ -110,7 +91,7 @@ export default {
     }
   }
 }
-.card-container {
+.info-container {
   flex-direction: column;
   padding-top: 30px;
   text-align: center;
@@ -122,8 +103,24 @@ export default {
     font-weight: 100;
     font-size: 18px;
   }
-  #cards {
-    flex-direction: row;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.card {
+  padding: 10px;
+  text-align: center;
+  color: #6b6868;
+  background-color: #f5f5f5;
+  font-size: 10px;
+  margin: 0 10px;
+  i {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #6b6868;
   }
 }
 </style>

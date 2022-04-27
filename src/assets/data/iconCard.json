@@ -1,21 +1,21 @@
 [
     {
-        "icon": "fa-regular fa-building",
+        "icon": "fa-building",
         "title": "Buildings",
         "url": "#"
     },
     {
-        "icon": "fa-solid fa-recycle",
+        "icon": "https://fontawesome.com/icons/recycle?s=solid",
         "title": "Renovate",
-        "url": "#",
+        "url": "#"
     },
     {
-        "icon": "fa-solid fa-house",
+        "icon": "https://fontawesome.com/icons/house?s=solid",
         "title": "Construct",
         "url": "#"
     },
     {
-        "icon": "fa-solid fa-truck",
+        "icon": "https://fontawesome.com/icons/truck?s=solid",
         "title": "Exclusive",
         "url": "#"
     }
