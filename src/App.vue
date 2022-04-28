@@ -37,24 +37,4 @@ export default {
 
 <style lang="scss">
 @import "@/assets/style/generals";
-.info-container .iconsColorate {
-  color: red;
-  &:hover {
-    color: #fed23f;
-    background-color: #f5f5f5;
-  }
-  h5 {
-    color: #6b6868;
-  }
-  p {
-    color: #6b6868;
-  }
-}
-.title-Props {
-  h5 {
-    color: #fed23f;
-    font-size: 12px;
-    margin: 30px 10px;
-  }
-}
 </style>

@@ -55,3 +55,50 @@ body {
         color: #6b6868;
     }
 }
+
+// peprsonalizzazione section icone colorate
+
+.info-container .iconsColorate {
+    color: red;
+
+    &:hover {
+        color: #fed23f;
+        background-color: #f5f5f5;
+    }
+
+    h5 {
+        color: #6b6868;
+    }
+
+    p {
+        color: #6b6868;
+    }
+}
+
+// personalizzazione titoli del footer 
+
+.title-Props {
+    margin: 0px auto;
+    height: fit-content;
+
+
+    .single-section {
+        padding: 40px 10px 0;
+
+    }
+
+    h5 {
+        color: #fed23f;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+// personalizzo cotatti footer
+.fontSmall {
+    font-size: 10px;
+}
+
+.contactIcon {
+    font-size: 12px;
+}
