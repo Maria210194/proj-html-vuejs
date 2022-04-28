@@ -29,19 +29,71 @@
         :card="item"
       />
     </div>
+    <div class="imageContainer">
+      <div class="col-8 icon2 d-flex ml-0">
+        <CardComponent2
+          v-for="(item, index) in iconCard2"
+          :key="index"
+          :card2="item"
+        />
+      </div>
+    </div>
+    <div class="info-container w-80 d-flex">
+      <div class="col-8">
+        <h4>Explore Recent Work</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque nemo
+          illo amet nam cupiditate sed eveniet voluptatem assumenda tempora
+          nostrum.
+        </p>
+        <div class="cardImage d-flex">
+          <img
+            src="@/assets/images/project2-featured-15013609.jpg"
+            alt="img1"
+          />
+          <img
+            src="@/assets/images/project1-featured-294276386.jpg"
+            alt="img1"
+          />
+          <img
+            src="@/assets/images/project3-featured-189023420.jpg"
+            alt="img1"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="info-container w-80 d-flex">
+      <h4>Our Core Values</h4>
+      <p class="w-60">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque nemo
+        illo amet nam cupiditate sed eveniet voluptatem assumenda tempora
+        nostrum.
+      </p>
+      <div class="iconCard d-flex w-60">
+        <CardComponent
+          v-for="(item, index) in iconCard"
+          :key="index"
+          :card="item"
+          class="iconsColorate"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import CardComponent from "@/components/CardComponent.vue";
+import CardComponent2 from "@/components/CardComponent2.vue";
 
 export default {
   name: "MainComponent",
   props: {
     iconCard: Array,
+    iconCard2: Array,
   },
   components: {
     CardComponent,
+    CardComponent2,
   },
 };
 </script>
@@ -93,15 +145,18 @@ export default {
 }
 .info-container {
   flex-direction: column;
-  padding-top: 30px;
+  margin-top: 20px;
   text-align: center;
   color: #6b6868;
   p {
     font-size: 10px;
   }
   h4 {
+    width: fit-content;
+    padding: 10px;
     font-weight: 100;
     font-size: 18px;
+    border-bottom: 1px solid #fed23f;
   }
 }
 
@@ -109,18 +164,26 @@ export default {
   margin-left: 0;
 }
 
-.card {
-  padding: 10px;
-  text-align: center;
-  color: #6b6868;
-  background-color: #f5f5f5;
-  font-size: 10px;
-  margin: 0 10px;
-  i {
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 50%;
-    border: 1px solid #6b6868;
+.imageContainer {
+  margin: 30px 0;
+  background-image: url("../assets/images/home-244125289.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 200px;
+  align-content: center;
+  vertical-align: middle;
+}
+.cardImage {
+  margin: 20px 0;
+  img {
+    width: 30%;
   }
+}
+.icon2 {
+  margin: 0 auto;
+}
+.iconCard {
+  margin: 0 auto;
+  margin-left: 50px;
 }
 </style>
