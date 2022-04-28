@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderComponent :links="arrayNav" />
     <MainComponent :iconCard="iconCard" :iconCard2="iconCard2" />
-    <FooterComponent />
+    <FooterComponent :link="arrayFooter" />
   </div>
 </template>
 
@@ -15,6 +15,7 @@ import FooterComponent from "./components/FooterComponent.vue";
 import arrayNav from "@/assets/data/arrayNav";
 import iconCard from "@/assets/data/iconCard";
 import iconCard2 from "@/assets/data/iconCard2";
+import arrayFooter from "@/assets/data/arrayFooter";
 
 export default {
   name: "App",
@@ -23,6 +24,7 @@ export default {
       arrayNav,
       iconCard,
       iconCard2,
+      arrayFooter,
     };
   },
   components: {
@@ -46,6 +48,13 @@ export default {
   }
   p {
     color: #6b6868;
+  }
+}
+.title-Props {
+  h5 {
+    color: #fed23f;
+    font-size: 12px;
+    margin: 30px 10px;
   }
 }
 </style>
